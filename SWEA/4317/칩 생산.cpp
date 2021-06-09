@@ -1,13 +1,13 @@
 #include <iostream>
 
 int box[11][26];
-int H, W, total = 0, max = 0;
+int H, W, total = 0, total_max = 0;
 using namespace std;
 
 void DFS(int r, int c) {
 	
 	if (r >= H - 1) {
-		if (max < total) max = total;
+		if (total_max < total) total_max = total;
 		return;
 	}
 
@@ -39,7 +39,7 @@ void DFS(int r, int c) {
 			}
 		}
 	}
-	if (max < total) max = total;
+	if (total_max < total) total_max = total;
 }
 
 int main() {
@@ -53,9 +53,9 @@ int main() {
 			}
 		}
 
-		max = 0, total = 0;
+		total_max = 0, total = 0;
 		DFS(0,0);
 
-		cout << '#' << tc << ' ' << max << '\n';
+		cout << '#' << tc << ' ' << total_max << '\n';
 	}
 }
