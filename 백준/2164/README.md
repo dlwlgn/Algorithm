@@ -4,7 +4,7 @@
 https://www.acmicpc.net/problem/2164
 
 ## 풀이 방법
-큐
+Queue
 
 ## 간단한 풀이 설명
 입력값을 받아 큐에 카드들이 배열된 상태로 만든다. <br>
