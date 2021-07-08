@@ -1,26 +1,58 @@
-#include <stdio.h>
+#include <string>
+#include <iostream>
 
-int Q[1000002];
-int front = -1, rear = -1;
+using namespace std;
 
-int main(){
-    int N;
-    scanf("%d", &N);
-    rear = N-1;
-    for(int i=1; i<=N; i++){
-        Q[i-1] = i;
-    }
-    if(N==1){
-        printf("%d", Q[front+1]);
-    }
-    else{
-        while(1){
-            front++;
-            if((rear-front)==1) break;
-            Q[++rear] = Q[++front];
-        }
-        printf("%d",Q[front+1]);
-    }
-    
-    
+int stack[102];
+int top = -1;
+
+int main() {
+	ios::sync_with_stdio(false);
+
+	string str;
+	while (1) {
+		getline(cin, str);
+		if (str == ".") break;
+		int idx = 0, flag = 0;
+		while (1) {
+			if (str[idx] == '.') break;
+			else if (str[idx] == '(') {
+				stack[++top] = 1;
+			}
+			else if (str[idx] == '[') {
+				stack[++top] = 2;
+			}
+			else if (str[idx] == ')') {
+				if (stack[top] == 1) {
+					top--;
+				}
+				else {
+					flag = 1;
+					break;
+				}
+			}
+			else if (str[idx] == ']') {
+				if (stack[top] == 2) {
+					top--;
+				}
+				else {
+					flag = 1;
+					break;
+				}
+			}
+			idx++;
+		}
+		if (flag) {
+			cout << "no\n";
+		}
+		else {
+			if (top == -1) {
+				cout << "yes\n";
+			}
+			else {
+				cout << "no\n";
+			}
+		}
+		top = -1;
+	}
 }
