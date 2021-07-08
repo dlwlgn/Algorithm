@@ -1,25 +1,15 @@
-# 
+# Hashing
 
 ## 문제 링크
-https://www.acmicpc.net/problem/
+https://www.acmicpc.net/problem/15829
 
 ## 풀이 방법
-
+구현, 해싱
 
 ## 간단한 풀이 설명
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
+L이 50까지 갈 경우 31^50으로 long long 조차 오버플로우가 발생하므로<br>
+나머지 연산의 모듈러 연산을 활용해서 pow 함수를 직접 만들어서 한번 곱할때마다 계속 나머지 연산을 하도록 했다.<br>
+그 외에도 main에서도 total에 더하기 전에 나머지 연산을 해준다.<br>
 
 ## 실수했던 부분
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+long long 에서 오버플로우가 생길 수 있음을 간과했다. <br>
