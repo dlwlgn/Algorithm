@@ -1,25 +1,14 @@
-# 
+# 1로 만들기
 
 ## 문제 링크
-https://www.acmicpc.net/problem/
+https://www.acmicpc.net/problem/1463
 
 ## 풀이 방법
-
+DFS, BFS
 
 ## 간단한 풀이 설명
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
+3으로 나누거나, 2로 나누거나, 1을 빼거나로 완전 탐색을 한다.<br>
+메모이제이션을 사용해서 백트래킹을 시킨다. <br>
 
 ## 실수했던 부분
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+처음에 백트래킹없이 완전탐색을 시켜서 시간초과가 났다.<br>
