@@ -11,3 +11,6 @@ https://github.com/dlwlgn/Algorithm/tree/master/%EB%B0%B1%EC%A4%80/silver5/2751
 
 ## 최소 힙
  - 최소 힙 구현 방식에 대해 https://github.com/dlwlgn/Algorithm/tree/master/%EB%B0%B1%EC%A4%80/silver1/1927
+
+## 중복 순열, 순열, 중복 조합, 조합
+ - https://github.com/dlwlgn/Algorithm/tree/master/%EC%A0%95%EC%98%AC/1167
